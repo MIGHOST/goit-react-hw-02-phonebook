@@ -59,7 +59,7 @@ export default class App extends Component {
         <ContactForm onHandleSubmit={this.addContact} />
         <h2>Contacts</h2>
         <ContactFilter value={filter} onChangeFilter={this.changeFilter} />
-        {contacts.length >= 2 && (
+        {contacts.length >= 1 && (
           <ContactList
             items={filteredContacts}
             onDeleteContact={this.deleteContact}

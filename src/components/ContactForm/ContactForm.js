@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styles from './ContactForm.module.css';
+import Button from '../Button/Button';
 
 export default class ContactForm extends Component {
   static propTypes = {
@@ -56,9 +57,12 @@ export default class ContactForm extends Component {
             className={styles.input}
           />
         </label>
-        <button type="submit" className={styles.btn}>
-          Add contact
-        </button>
+        { name.length >=1 && number.length >=1 ?
+          <Button title="Add contact" disabled={false}  /> :
+          <Button title="Add contact" disabled={true} />
+        }
+       
+      
       </form>
     );
   }
